@@ -6,7 +6,7 @@ module Api
 
     def index
       res = {
-        :name          => ApiConfig.base.name,
+        :name          => ApiConfig.base.name + " Tariq",
         :description   => ApiConfig.base.description,
         :version       => ManageIQ::Api::VERSION,
         :versions      => entrypoint_versions,
