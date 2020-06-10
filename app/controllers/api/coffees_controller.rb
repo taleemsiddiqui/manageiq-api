@@ -1,7 +1,7 @@
 module Api
-    class CoffeesController < BaseController 
+    class CoffeesController < ActionController::API
         def index
-            render :json => {message: "Test"}
+          render :plain => 'Coffee'
         end
-    end 
+      end
   end 
