@@ -8,7 +8,7 @@ module Api
             http.request(req)
             }
             
-            render :json => {message: res.body}
+            render :json => res.body
         end
       end
   end 
