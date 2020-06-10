@@ -3882,7 +3882,7 @@
         - :name: unassign
           :identifier: rbac_user_tags_edit
   :coffees:
-    :description: Coffee
+    :description: Coffees
     :options:
       - :collection
     :verbs: *gpd
