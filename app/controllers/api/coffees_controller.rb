@@ -12,7 +12,7 @@ module Api
               http.request(req)
             }
             
-      render :json => params
+      render :json => res.body
     end
   end
 end
