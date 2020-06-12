@@ -1,5 +1,5 @@
 module Api
-  class CoffeesController < ActionController::API
+  class CoffeesController < BaseController
     def index
       url = URI.parse('http://34.67.132.139:9000/aws/resources/regions')
             req = Net::HTTP::Get.new(url.to_s)
