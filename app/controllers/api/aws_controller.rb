@@ -1,8 +1,7 @@
 module Api
-    class AWSController < ActionController::API
+    class AwsController < ActionController::API
         def index
           render :plain => 'AWS'
-          
         end
       end
   end 
