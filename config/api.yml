@@ -3886,7 +3886,7 @@
     :options:
       - :collection
     :verbs: *gpd
-    :klass: AWS
+    :klass: Aws
     :collection_actions:
       :get:
         - :name: read
