@@ -3881,16 +3881,16 @@
           :identifier: rbac_user_tags_edit
         - :name: unassign
           :identifier: rbac_user_tags_edit
-  :aws:
-    :description: Amazon Web Services
+  :coffees:
+    :description: Coffee
     :options:
       - :collection
     :verbs: *gpd
-    :klass: Aws
+    :klass: Coffee
     :collection_actions:
       :get:
         - :name: read
-          :identifier: aws_show_list
+          :identifier: coffee_show_list
       :post:
         - :name: create
           :identifier: coffee_new
@@ -3901,15 +3901,15 @@
     :resource_actions:
       :get:
         - :name: read
-          :identifier: aws_show
+          :identifier: coffee_show
       :post:
         - :name: edit
-          :identifier: aws_edit
+          :identifier: coffee_edit
         - :name: delete
-          :identifier: aws_delete
+          :identifier: coffee_delete
       :delete:
         - :name: delete
-          :identifier: aws_delete
+          :identifier: coffee_delete
   :vms:
     :description: Virtual Machines
     :identifier: vm
