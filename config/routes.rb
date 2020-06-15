@@ -7,7 +7,6 @@ Rails.application.routes.draw do
 
     get "/ping" => "ping#index"
     get "/product_info" => "api#product_info"
-    get "/coffees" => "coffees#index"
 
     Api::ApiConfig.collections.each do |collection_name, collection|
       # OPTIONS action for each collection
