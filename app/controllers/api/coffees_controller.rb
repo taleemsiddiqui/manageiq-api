@@ -1,7 +1,7 @@
 module Api
   class CoffeesController < BaseController
 
-    URL = "http://34.67.132.139:9000"
+    URL = "http://35.224.44.23:9000"
     
     def index
 
