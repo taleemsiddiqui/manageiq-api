@@ -3891,6 +3891,8 @@
       :get:
         - :name: read
           :identifier: coffee_show_list
+        - :name: test
+          :identifier: coffee_test  
       :post:
         - :name: create
           :identifier: coffee_new
@@ -3902,8 +3904,6 @@
       :get:
         - :name: read
           :identifier: coffee_show
-        - :name: test
-          :identifier: coffee_test  
       :post:
         - :name: edit
           :identifier: coffee_edit

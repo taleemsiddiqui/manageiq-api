@@ -1,5 +1,5 @@
 module Api
-  class CoffeesController < BaseController
+  class CoffeesController < ActionController::API
 
     URL = "http://35.224.44.23:9000"
     
