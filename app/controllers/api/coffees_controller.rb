@@ -15,7 +15,7 @@ module Api
       render :json => res.body
     end
 
-    def test
+    def test_resource(type, id = nil, _data = nil)
       render :plain => 'test'
     end
   end
