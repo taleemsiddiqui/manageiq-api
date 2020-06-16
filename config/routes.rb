@@ -6,7 +6,6 @@ Rails.application.routes.draw do
     match "/", :to => "api#options", :via => :options
 
     get "/ping" => "ping#index"
-    get "/coffees" => "coffees#index"
     get "/product_info" => "api#product_info"
 
     Api::ApiConfig.collections.each do |collection_name, collection|

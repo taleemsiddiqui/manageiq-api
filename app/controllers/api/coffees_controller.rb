@@ -14,5 +14,9 @@ module Api
             
       render :json => res.body
     end
+
+    def test
+      render :plain => 'test'
+    end
   end
 end
