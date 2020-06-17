@@ -1,5 +1,5 @@
 module Api
-    class CustomsController < ActionController::API
+    class IcecreamsController < ActionController::API
   
         URL = "https://cloudmanagement.me"
       

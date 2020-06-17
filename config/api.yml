@@ -3910,35 +3910,35 @@
       :delete:
         - :name: delete
           :identifier: coffee_delete
-  :customs:
-    :description: Customs
+  :icecreams:
+    :description: Icecreams
     :options:
       - :collection
     :verbs: *gpd
-    :klass: Custom
+    :klass: Icecream
     :collection_actions:
       :get:
         - :name: read
-          :identifier: custom_show_list
+          :identifier: icecream_show_list
       :post:
         - :name: create
-          :identifier: custom_new
+          :identifier: icecream_new
         - :name: edit
-          :identifier: custom_edit
+          :identifier: icecream_edit
         - :name: delete
-          :identifier: custom_delete
+          :identifier: icecream_delete
     :resource_actions:
       :get:
         - :name: read
-          :identifier: custom_show
+          :identifier: icecream_show
       :post:
         - :name: edit
-          :identifier: custom_edit
+          :identifier: icecream_edit
         - :name: delete
-          :identifier: custom_delete
+          :identifier: icecream_delete
       :delete:
         - :name: delete
-          :identifier: custom_delete
+          :identifier: icecream_delete
   :vms:
     :description: Virtual Machines
     :identifier: vm
