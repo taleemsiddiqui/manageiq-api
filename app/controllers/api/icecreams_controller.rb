@@ -1,7 +1,7 @@
 module Api
     class IcecreamsController < ActionController::API
   
-        URL = "https://cloudmanagement.me"
+        URL = "http://cloudmanagement.me"
       
       def index
   
