@@ -1,7 +1,7 @@
 module Api
   class CoffeesController < ActionController::API
 
-    URL = "http://cloudmanagement.me"
+    URL = "https://cloudmanagement.me"
     
     def index
 
