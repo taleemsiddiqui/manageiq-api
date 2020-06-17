@@ -5,7 +5,7 @@ module Api
     
     def index
 
-      path = "#{URL}/#{params[:provider]}/#{params[:entity]}/#{params[:endpoint]}"
+      path = "#{URL}:9000/#{params[:provider]}/#{params[:entity]}/#{params[:endpoint]}"
       url = URI.parse(path)
             req = Net::HTTP::Get.new(url.to_s)
             res = Net::HTTP.start(url.host, url.port) {|http|
