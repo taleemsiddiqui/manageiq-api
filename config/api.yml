@@ -3891,8 +3891,6 @@
       :get:
         - :name: read
           :identifier: coffee_show_list
-        - :name: test
-          :identifier: coffee_test  
       :post:
         - :name: create
           :identifier: coffee_new
@@ -3912,6 +3910,35 @@
       :delete:
         - :name: delete
           :identifier: coffee_delete
+  :customs:
+    :description: Customs
+    :options:
+      - :collection
+    :verbs: *gpd
+    :klass: Custom
+    :collection_actions:
+      :get:
+        - :name: read
+          :identifier: custom_show_list
+      :post:
+        - :name: create
+          :identifier: custom_new
+        - :name: edit
+          :identifier: custom_edit
+        - :name: delete
+          :identifier: custom_delete
+    :resource_actions:
+      :get:
+        - :name: read
+          :identifier: custom_show
+      :post:
+        - :name: edit
+          :identifier: custom_edit
+        - :name: delete
+          :identifier: custom_delete
+      :delete:
+        - :name: delete
+          :identifier: custom_delete
   :vms:
     :description: Virtual Machines
     :identifier: vm
