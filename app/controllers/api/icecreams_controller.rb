@@ -1,5 +1,5 @@
 module Api
-    class IcecreamsController < ActionController::API
+    class IcecreamsController < BaseController
   
         #URL = "http://cloudmanagement.me"
         URL = "http://localhost:10000"
