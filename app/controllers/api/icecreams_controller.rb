@@ -17,13 +17,20 @@ module Api
         else 
           # path = "#{URL}:11000/#{params[:command]}/#{params[:template]}/#{params[:workspace]}"
           path = "#{URL}/#{params[:command]}/#{params[:template]}/#{params[:workspace]}"
-          url = URI.parse(path)
+
+          begin
+            url = URI.parse(path)
                 req = Net::HTTP::Get.new(url.to_s)
                 res = Net::HTTP.start(url.host, url.port) {|http|
                   http.request(req)
                 }
                 
-          render :json => res.body
+            render :json => res.body
+          rescue => exception
+            render :json => exception
+          end
+
+          
         end
         
       end
