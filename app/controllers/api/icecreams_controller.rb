@@ -1,7 +1,7 @@
 module Api
     class IcecreamsController < BaseController
   
-        #URL = "http://cloudmanagement.me"
+        #URL = "http://cloudmanagement.me:11000"
         URL = "http://localhost:10000"
       
       def index
