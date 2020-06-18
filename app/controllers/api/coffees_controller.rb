@@ -1,8 +1,8 @@
 module Api
   class CoffeesController < BaseController
 
-    URL = "http://cloudmanagement.me:9000"
-    #URL = "http://localhost:6000"
+    #URL = "http://cloudmanagement.me:9000"
+    URL = "http://localhost:6000"
     
     def index
 
