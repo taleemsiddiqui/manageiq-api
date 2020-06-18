@@ -2,19 +2,30 @@ module Api
   class CoffeesController < ActionController::API
 
     #URL = "http://cloudmanagement.me"
-    URL = "http://localhost"
+    URL = "http://localhost:6000"
     
     def index
 
-      #path = "#{URL}:9000/#{params[:provider]}/#{params[:entity]}/#{params[:endpoint]}"
-      path = "#{URL}:6000/#{params[:provider]}/#{params[:entity]}/#{params[:endpoint]}"
-      url = URI.parse(path)
-            req = Net::HTTP::Get.new(url.to_s)
-            res = Net::HTTP.start(url.host, url.port) {|http|
-              http.request(req)
-            }      
-            
-      render :json => res.body
+      is_valid = true
+
+      is_valid = false if params[:provider].nil? || params[:provider].blank?
+      is_valid = false if params[:entity].nil? || params[:entity].blank?
+      is_valid = false if params[:endpoint].nil? || params[:endpoint].blank?
+
+      unless is_valid
+        render :json => {error: true, message: "Please provide the required params."}
+      else 
+        path = "#{URL}/#{params[:provider]}/#{params[:entity]}/#{params[:endpoint]}"
+        url = URI.parse(path)
+              req = Net::HTTP::Get.new(url.to_s)
+              res = Net::HTTP.start(url.host, url.port) {|http|
+                http.request(req)
+              }
+              
+        render :json => res.body
+      end
     end
   end
 end
+
+
