@@ -3881,6 +3881,37 @@
           :identifier: rbac_user_tags_edit
         - :name: unassign
           :identifier: rbac_user_tags_edit
+  :coffees:
+    :description: Coffee
+    :options:
+      - :collection
+    :verbs: *gpd
+    :klass: Coffee
+    :collection_actions:
+      :get:
+        - :name: read
+          :identifier: coffee_show_list
+        - :name: display
+          :identifier: coffee_display
+      :post:
+        - :name: create
+          :identifier: coffee_new
+        - :name: edit
+          :identifier: coffee_edit
+        - :name: delete
+          :identifier: coffee_delete
+    :resource_actions:
+      :get:
+        - :name: read
+          :identifier: coffee_show
+      :post:
+        - :name: edit
+          :identifier: coffee_edit
+        - :name: delete
+          :identifier: coffee_delete
+      :delete:
+        - :name: delete
+          :identifier: coffee_delete
   :vms:
     :description: Virtual Machines
     :identifier: vm

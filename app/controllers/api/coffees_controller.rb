@@ -1,10 +1,10 @@
 module Api
-  class CoffeesController < ActionController::API
+  class CoffeesController < BaseController
 
     URL = "http://cloudmanagement.me:9000"
     #URL = "http://localhost:6000"
     
-    def index
+    def display_resource(type, id, data)
 
       is_valid = true
 
