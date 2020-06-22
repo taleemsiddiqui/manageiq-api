@@ -4184,6 +4184,8 @@
       :get:
         - :name: read
           :identifier: zone
+        - :name: display
+          :identifier: zone_display
       :post:
         - :name: query
           :identifier: zone
@@ -4205,32 +4207,3 @@
       :delete:
         - :name: delete
           :identifier: zone_delete
-  :zongs:
-    :description: Zongs
-    :options:
-      - :collection
-    :verbs: *gpd
-    :klass: Zong
-    :collection_actions:
-      :get:
-        - :name: read
-          :identifier: zong_show_list
-      :post:
-        - :name: create
-          :identifier: zong_new
-        - :name: edit
-          :identifier: zong_edit
-        - :name: delete
-          :identifier: zong_delete
-    :resource_actions:
-      :get:
-        - :name: read
-          :identifier: zong_show
-      :post:
-        - :name: edit
-          :identifier: zong_edit
-        - :name: delete
-          :identifier: zong_delete
-      :delete:
-        - :name: delete
-          :identifier: zong_delete

@@ -2,6 +2,10 @@ module Api
   class ZonesController < BaseController
     INVALID_ZONES_ATTRS = ID_ATTRS + %w[created_on updated_on].freeze
 
+    def display
+      render :plain => "pong"
+    end
+
     # Edit an existing zone. Certain fields are meant for internal use only
     # and may not be edited. Attempting to edit one of the forbidden fields
     # will result in a bad request error.
