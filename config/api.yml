@@ -3881,16 +3881,16 @@
           :identifier: rbac_user_tags_edit
         - :name: unassign
           :identifier: rbac_user_tags_edit
-  :vsi:
-    :description: VSI
+  :tariq:
+    :description: Tariq
     :options:
       - :collection
     :verbs: *g
-    :klass: Vsi
+    :klass: Tariq
     :collection_actions:
       :get:
         - :name: display
-          :identifier: vsi_display_collection
+          :identifier: tariq_display
   :vms:
     :description: Virtual Machines
     :identifier: vm
