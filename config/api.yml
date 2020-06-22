@@ -3881,54 +3881,6 @@
           :identifier: rbac_user_tags_edit
         - :name: unassign
           :identifier: rbac_user_tags_edit
-  :usersvsi:
-    :description: Usersvsi
-    :identifier: rbac_user_vsi
-    :options:
-      - :collection
-      - :custom_actions
-    :verbs: *gpppd
-    :klass: Uservsi
-    :identifying_attrs: name,userid
-    :subcollections:
-      - :custom_button_events
-      - :tags
-    :collection_actions:
-      :get:
-        - :name: read
-          :identifier: rbac_user_vsi_show_list
-      :post:
-        - :name: query
-          :identifier: rbac_user_vsi_show_list
-        - :name: create
-          :identifier: rbac_user_vsi_add
-        - :name: edit
-          :identifier: rbac_user_vsi_edit
-        - :name: delete
-          :identifier: rbac_user_vsi_delete
-        - :name: assign_tags
-          :identifier: rbac_user_vsi_tags_edit
-        - :name: unassign_tags
-          :identifier: rbac_user_vsi_tags_edit
-    :resource_actions:
-      :get:
-        - :name: read
-          :identifier: rbac_user_vsi_show
-      :post:
-        - :name: edit
-          :identifier: rbac_user_vsi_edit
-        - :name: delete
-          :identifier: rbac_user_vsi_delete
-        - :name: set_current_group
-      :delete:
-        - :name: delete
-          :identifier: rbac_user_vsi_delete
-    :tags_subcollection_actions:
-      :post:
-        - :name: assign
-          :identifier: rbac_user_vsi_tags_edit
-        - :name: unassign
-          :identifier: rbac_user_vsi_tags_edit
   :vms:
     :description: Virtual Machines
     :identifier: vm
