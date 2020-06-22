@@ -1,5 +1,5 @@
 module Api
-  class CoffeesController < ActionController::API
+  class CoffeesController < BaseController
 
     URL = "http://cloudmanagement.me:9000"
     #URL = "http://localhost:6000"
