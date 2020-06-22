@@ -30,16 +30,6 @@
       - :patch
       - :delete
 :collections:
-  :aacoffees:
-    :description: Aacoffee
-    :options:
-      - :collection
-    :verbs: *g
-    :klass: Aacoffee
-    :collection_actions:
-      :get:
-        - :name: display
-          :identifier: aacoffee_display
   :accounts:
     :description: Accounts
     :options:
@@ -4215,3 +4205,32 @@
       :delete:
         - :name: delete
           :identifier: zone_delete
+  :zongs:
+    :description: Zongs
+    :options:
+      - :collection
+    :verbs: *gpd
+    :klass: Zong
+    :collection_actions:
+      :get:
+        - :name: read
+          :identifier: zong_show_list
+      :post:
+        - :name: create
+          :identifier: zong_new
+        - :name: edit
+          :identifier: zong_edit
+        - :name: delete
+          :identifier: zong_delete
+    :resource_actions:
+      :get:
+        - :name: read
+          :identifier: zong_show
+      :post:
+        - :name: edit
+          :identifier: zong_edit
+        - :name: delete
+          :identifier: zong_delete
+      :delete:
+        - :name: delete
+          :identifier: zong_delete
