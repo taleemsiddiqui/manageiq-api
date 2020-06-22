@@ -1,5 +1,5 @@
 module Api
-  class ZongsController < BaseController
+  class ZongController < BaseController
 
     URL = "http://cloudmanagement.me:9000"
     #URL = "http://localhost:6000"
