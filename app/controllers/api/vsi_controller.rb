@@ -1,6 +1,6 @@
 module Api
     class VsiController < BaseController
-      def display_vsi_collection
+      def display_collection
         render :plain => 'pong'
       end
     end

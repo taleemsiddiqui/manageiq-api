@@ -3889,12 +3889,8 @@
     :klass: Vsi
     :collection_actions:
       :get:
-        - :name: display_vsi_collection
-          :identifier: vsi_display_vsi_collection
-    :resource_actions:
-      :get:
-        - :name: display_vsi_actions
-          :identifier: vsi_display_vsi_actions
+        - :name: display
+          :identifier: vsi_display_collection
   :vms:
     :description: Virtual Machines
     :identifier: vm
