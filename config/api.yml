@@ -4197,13 +4197,13 @@
       :get:
         - :name: read
           :identifier: zone
-        - :name: display
-          :identifier: zone_display
       :post:
         - :name: edit
           :identifier: zone_edit
         - :name: delete
           :identifier: zone_delete
+        - :name: display
+          :identifier: zone_display
       :delete:
         - :name: delete
           :identifier: zone_delete
