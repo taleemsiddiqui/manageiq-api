@@ -14,3 +14,4 @@
 
 # ignore included plugins in bundler.d
 bundler.d/*
+.idea/
