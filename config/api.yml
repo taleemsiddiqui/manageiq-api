@@ -30,6 +30,16 @@
       - :patch
       - :delete
 :collections:
+  :aacoffees:
+    :description: Aacoffee
+    :options:
+      - :collection
+    :verbs: *g
+    :klass: Aacoffee
+    :collection_actions:
+      :get:
+        - :name: display
+          :identifier: aacoffee_display
   :accounts:
     :description: Accounts
     :options:
@@ -3881,16 +3891,6 @@
           :identifier: rbac_user_tags_edit
         - :name: unassign
           :identifier: rbac_user_tags_edit
-  :coffees:
-    :description: Coffee
-    :options:
-      - :collection
-    :verbs: *g
-    :klass: Coffee
-    :collection_actions:
-      :get:
-        - :name: display
-          :identifier: coffee_display
   :vms:
     :description: Virtual Machines
     :identifier: vm
