@@ -2,7 +2,7 @@ module Api
   class ZonesController < BaseController
     INVALID_ZONES_ATTRS = ID_ATTRS + %w[created_on updated_on].freeze
 
-    def display
+    def display_resource(type, id, data)
       render :plain => "pong"
     end
 

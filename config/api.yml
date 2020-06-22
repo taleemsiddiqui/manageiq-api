@@ -4184,8 +4184,6 @@
       :get:
         - :name: read
           :identifier: zone
-        - :name: display
-          :identifier: zone_display
       :post:
         - :name: query
           :identifier: zone
@@ -4199,6 +4197,8 @@
       :get:
         - :name: read
           :identifier: zone
+        - :name: display
+          :identifier: zone_display
       :post:
         - :name: edit
           :identifier: zone_edit
