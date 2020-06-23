@@ -3,7 +3,7 @@ module Api
     INVALID_ZONES_ATTRS = ID_ATTRS + %w[created_on updated_on].freeze
 
     def display_resource(type, id, data)
-      render :plain => "pong"
+      render :json => {message: 'pong'}
     end
 
     # Edit an existing zone. Certain fields are meant for internal use only
