@@ -94,10 +94,12 @@ module Api
       end
 
       def get_and_update_one_collection(is_subcollection, target, type, id)
+        log_request("", "get_and_update_one_collection method called")
         update_one_collection(is_subcollection, target, type, id, @req.resource)
       end
 
       def get_and_update_multiple_collections(is_subcollection, target, type)
+        log_request("", "get_and_update_multiple_collections method called")
         update_multiple_collections(is_subcollection, target, type, @req.resources)
       end
 
@@ -107,6 +109,7 @@ module Api
         if is_subcollection
           send(target, parent_resource, type, id, resource)
         else
+          log_request("", "update_one_collection method called data => target: #{target}, type:#{type}, id: #{id},resource:#{resource}")
           send(target, type, id, resource)
         end
       end

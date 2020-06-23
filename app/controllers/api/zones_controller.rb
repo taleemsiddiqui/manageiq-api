@@ -8,6 +8,7 @@ module Api
 
     def display_resource(type, id, data)
       log_request("", "display method called")
+      log_request("", "display_resource method called data => type:#{type}, id: #{id},data:#{data}")
     end
 
     # Edit an existing zone. Certain fields are meant for internal use only
