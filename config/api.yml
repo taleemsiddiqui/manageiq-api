@@ -4193,8 +4193,6 @@
           :identifier: zone_edit
         - :name: delete
           :identifier: zone_delete
-        - :name: coffee
-          :identifier: zone_coffee
     :resource_actions:
       :get:
         - :name: read
