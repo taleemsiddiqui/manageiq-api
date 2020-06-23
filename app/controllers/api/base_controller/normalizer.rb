@@ -115,6 +115,7 @@ module Api
       end
 
       def normalize_select_attributes(obj, opts)
+        log_request("", "normalize_select_attributes method called #{obj}")
         if opts[:render_attributes].present?
           opts[:render_attributes]
         elsif obj.respond_to?(:attributes) && obj.class.respond_to?(:virtual_attribute_names)

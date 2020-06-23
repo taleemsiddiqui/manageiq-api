@@ -14,6 +14,7 @@ module Api
       # Helper proc to render a single resource
       #
       def render_resource(type, resource, opts = {})
+        log_request("", "render_resource method called => type: #{type}, resource: #{resource}, opts: #{opts}")
         render :json => resource_to_jbuilder(type, gen_reftype(type, opts), resource, opts).target!
       end
 
