@@ -27,7 +27,7 @@ module Api
     before_action :validate_api_action, :except => [:options, :product_info]
     before_action :validate_response_format, :except => [:destroy]
     before_action :ensure_pagination, :only => :index
-    after_action :log_api_response
+    # after_action :log_api_response
 
     respond_to :json
 
