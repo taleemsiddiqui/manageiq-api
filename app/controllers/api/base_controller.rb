@@ -27,7 +27,7 @@ module Api
     before_action :validate_api_action, :except => [:options, :product_info]
     before_action :validate_response_format, :except => [:destroy]
     before_action :ensure_pagination, :only => :index
-    # after_action :log_api_response
+    after_action :log_api_response
 
     respond_to :json
 
@@ -91,6 +91,7 @@ module Api
     end
 
     def update
+      log_request("", "update method called")
       render_resource(@req.collection.to_sym, update_collection(@req.subject.to_sym, @req.subject_id))
     end
 

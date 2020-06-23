@@ -2,8 +2,12 @@ module Api
   class ZonesController < BaseController
     INVALID_ZONES_ATTRS = ID_ATTRS + %w[created_on updated_on].freeze
 
+    def coffee
+      log_request("", "Coffee method called")
+    end
+
     def display_resource(type, id, data)
-      render :json => {message: 'pong'}
+      log_request("", "display method called")
     end
 
     # Edit an existing zone. Certain fields are meant for internal use only
