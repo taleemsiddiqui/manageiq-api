@@ -4202,44 +4202,6 @@
           :identifier: zone_edit
         - :name: delete
           :identifier: zone_delete
-        - :name: display
-          :identifier: zone_display
       :delete:
         - :name: delete
           :identifier: zone_delete
-  :zongs:
-    :description: Zongs
-    :identifier: zong
-    :options:
-      - :collection
-    :subcollections:
-      - :settings
-    :verbs: *gpd
-    :klass: Zong
-    :collection_actions:
-      :get:
-        - :name: read
-          :identifier: zong
-      :post:
-        - :name: query
-          :identifier: zong
-        - :name: create
-          :identifier: zong_new
-        - :name: edit
-          :identifier: zong_edit
-        - :name: delete
-          :identifier: zong_delete
-    :resource_actions:
-      :get:
-        - :name: read
-          :identifier: zong
-      :post:
-        - :name: edit
-          :identifier: zong_edit
-        - :name: delete
-          :identifier: zong_delete
-        - :name: display
-          :identifier: zong_display
-      :delete:
-        - :name: delete
-          :identifier: zong_delete
