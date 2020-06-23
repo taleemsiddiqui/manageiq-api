@@ -4,7 +4,7 @@ module Api
 
     def coffee
       log_request("", "Coffee method called")
-      render :plain => "ponka"
+      render :plain => "ping pong"
     end
 
     def display_resource(type, id, data)
