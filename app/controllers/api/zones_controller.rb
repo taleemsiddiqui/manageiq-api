@@ -2,8 +2,10 @@ module Api
   class ZonesController < BaseController
     INVALID_ZONES_ATTRS = ID_ATTRS + %w[created_on updated_on].freeze
 
-    URL = "http://cloudmanagement.me:9000"
-    URL2 = "http://cloudmanagement.me:11000"
+    # URL = "http://cloudmanagement.me:9000"
+    URL = "http://localhost:6000"
+    # URL2 = "http://cloudmanagement.me:11000"
+    URL2 = "http://localhost:10000"
 
     def coffee
 
