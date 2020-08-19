@@ -71,17 +71,19 @@ module Api
 
     def automation
 
-      uri = URI("#{URL3}/#{params[:endpoint]}")
+      data = {}
 
-      api_log_info("automation URL: #{uri}")
+      params.each {|key, val| data[key] = val if key != 'endpoint'}
+              
+      uri = URI("#{URL3}/#{params[:endpoint]}")
   
       http = Net::HTTP.new(uri.host, uri.port)
   
       req = Net::HTTP::Post.new(uri.path, {'Content-Type' =>'application/json'})
   
-      req.body = params[:data].to_json
+      req.body = data.to_json
       res = http.request(req)
-              
+  
       render :json => res.body
   
     end
