@@ -6,8 +6,9 @@ module Api
     URL = "http://localhost:6000"
     # URL2 = "http://cloudmanagement.me:11000"
     URL2 = "http://localhost:10000"
+    URL3 = "http://localhost:1880"
 
-    def coffee
+    def cloudapi
 
       is_valid = true
 
@@ -37,7 +38,7 @@ module Api
       end
     end
 
-    def icecream
+    def orchestration
 
       is_valid = true
 
@@ -66,6 +67,23 @@ module Api
 
       end
 
+    end
+
+    def automation
+
+      uri = URI("#{URL3}/#{params[:welcome][:endpoint]}")
+  
+      puts uri
+  
+      http = Net::HTTP.new(uri.host, uri.port)
+  
+      req = Net::HTTP::Post.new(uri.path, {'Content-Type' =>'application/json'})
+  
+      req.body = params[:welcome][:data].to_json
+      res = http.request(req)
+              
+      render :json => res.body
+  
     end
     # def coffee
     #   log_request("", "Coffee method called")
