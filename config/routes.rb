@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     get "/product_info" => "api#product_info"
     # get "/coffees" => "coffees#index"
     # get "/icecreams" => "icecreams#index"
-    post "/zones/automation" => "zones#automation"
+    post '/api/zones/automation', to: 'api/zones#automation'
 
     Api::ApiConfig.collections.each do |collection_name, collection|
       # OPTIONS action for each collection
