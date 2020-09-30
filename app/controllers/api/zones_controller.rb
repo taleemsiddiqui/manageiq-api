@@ -6,7 +6,7 @@ module Api
     URL = "http://localhost:6000"
     # URL2 = "http://cloudmanagement.me:11000"
     URL2 = "http://localhost:10000"
-    URL3 = "http://localhost:1880"
+    URL3 = "https://cloudmanagement.me:1888"
 
     def cloudapi
 
@@ -76,9 +76,9 @@ module Api
       params.each {|key, val| data[key] = val if key != 'endpoint'}
               
       uri = URI("#{URL3}/#{params[:endpoint]}")
-  
-      http = Net::HTTP.new(uri.host, uri.port)
-  
+      http =Net::HTTP.start(uri.host, uri.port,:use_ssl => uri.scheme == 'https') 
+      #http = Net::HTTP.new(uri.host, uri.port)
+      #http.use_ssl = true
       req = Net::HTTP::Post.new(uri.path, {'Content-Type' =>'application/json'})
   
       req.body = data.to_json
