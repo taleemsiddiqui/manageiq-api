@@ -3,7 +3,8 @@ module Api
     INVALID_ZONES_ATTRS = ID_ATTRS + %w[created_on updated_on].freeze
 
     # URL = "http://cloudmanagement.me:9000"
-    URL = "http://localhost:6000"
+    # URL = "https://localhost:6000"
+      URL = "https://cloudmanagement.me:9000"
     # URL2 = "http://cloudmanagement.me:11000"
     URL2 = "http://localhost:10000"
     URL3 = "https://cloudmanagement.me:1888"
@@ -22,12 +23,17 @@ module Api
         path = "#{URL}/#{params[:provider]}/#{params[:entity]}/#{params[:endpoint]}"
 
         begin
+   	  url = URI.parse(path)
+  	  http =Net::HTTP.start(url.host, url.port,:use_ssl => url.scheme == 'https')
+   	  req = Net::HTTP::Get.new(url.to_s, {'Content-Type' =>'application/json'})
 
-          url = URI.parse(path)
-          req = Net::HTTP::Get.new(url.to_s)
-          res = Net::HTTP.start(url.host, url.port) {|http|
-            http.request(req)
-          }
+	  #req.body = data.to_json
+    	  res = http.request(req)
+          #url = URI.parse(path)
+          #req = Net::HTTP::Get.new(url.to_s)
+          #res = Net::HTTP.start(url.host, url.port) {|http|
+          #  http.request(req)
+          #}
 
           render :json => res.body
 
