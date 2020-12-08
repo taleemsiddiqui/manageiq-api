@@ -10,12 +10,14 @@ module Api
     URL3 = "https://cloudmanagement.me:1888"
 
     def cloudapi
-
+      profile = request.headers["profile"]
+      log_request("Profile", profile)
       is_valid = true
 
       is_valid = false if params[:provider].nil? || params[:provider].blank?
       is_valid = false if params[:entity].nil? || params[:entity].blank?
       is_valid = false if params[:endpoint].nil? || params[:endpoint].blank?
+     
 
       unless is_valid
         render :json => {error: true, message: "Please provide the required params."}
@@ -25,7 +27,7 @@ module Api
         begin
    	  url = URI.parse(path)
   	  http =Net::HTTP.start(url.host, url.port,:use_ssl => url.scheme == 'https')
-   	  req = Net::HTTP::Get.new(url.to_s, {'Content-Type' =>'application/json'})
+   	  req = Net::HTTP::Get.new(url.to_s, {'profile' => profile,'Content-Type' =>'application/json'})
 
 	  #req.body = data.to_json
     	  res = http.request(req)
